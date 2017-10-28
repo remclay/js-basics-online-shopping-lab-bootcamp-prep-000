@@ -50,7 +50,7 @@ var cart = [];
 
 function total() {
   var totalCart = 0;
-  for (i = 0; i < cart.length; i ++) {
+  for (var i = 0; i < cart.length; i ++) {
     totalCart = totalCart + parseInt(cart[i][Object.keys(cart[i])[0]]);
   }
   return totalCart;
