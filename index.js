@@ -32,7 +32,7 @@ function viewCart() {
     console.log(`In your cart, you have ${Object.keys(cart[0])[0]} at $${cart[0][Object.keys(cart[0])[0]]}.`);
   } else if (cart.length > 1) {
       var cartArray = [];
-      for (i = 0; i <= cart.length-1; i ++) {
+      for (var i = 0; i <= cart.length-1; i ++) {
         var oKeys = Object.keys(cart[i])[0];
         cartArray.push(` ${oKeys} at $${cart[i][oKeys]}`);
           if (cartArray.length === 2) {
@@ -59,7 +59,7 @@ function total() {
 var cart = [];
 
 function removeFromCart(item) {
-  for (i = 0; i <= cart.length-1; i ++) {
+  for (var i = 0; i <= cart.length-1; i ++) {
     if (cart[i].hasOwnProperty(item)) {
       cart.splice(i, 1);
       return cart;
